@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - Volcán Cotopaxi</title>
+</head>
+<body>
+    <h1>VOLCAN COTOPAXI</h1>
+    
+    <form action="/action_page.php" autocomplete="on">
+        <fieldset>
+            <legend>Encuesta</legend>
+            
+            <!-- 1. Datos personales -->
+            <label>1. Datos personales</label><br>
+            <label for="fname">Nombre:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+
+            <!-- 2. Motivo Principal (Radio Buttons) -->
+            <label>2. ¿Cuál es el motivo PRINCIPAL de su visita?</label><br>
+            <input type="radio" id="motivo1" name="motivo_principal" value="recreacion">
+            <label for="motivo1">Recreación y descanso</label><br>
+            <input type="radio" id="motivo2" name="motivo_principal" value="aventura">
+            <label for="motivo2">Aventura y deportes</label><br>
+            <input type="radio" id="motivo3" name="motivo_principal" value="naturaleza">
+            <label for="motivo3">Naturaleza y paisajes</label><br><br>
+
+            <!-- 3. Actividades Específicas (Checkboxes) -->
+            <label>3. ¿Qué actividades ESPECÍFICAS planea o le gustaría realizar?</label><br>
+            <input type="checkbox" id="act_caminata" name="actividades" value="Caminata">
+            <label for="act_caminata">Caminata o ascenso (ej. al refugio o cumbre)</label><br>
+            
+            <input type="checkbox" id="act_ciclismo" name="actividades" value="Ciclismo">
+            <label for="act_ciclismo">Ciclismo de montaña / Downhill</label><br>
+            
+            <input type="checkbox" id="act_acampar" name="actividades" value="Camping">
+            <label for="act_acampar">Acampar / Pasar la noche</label><br>
+            
+            <input type="checkbox" id="act_fotografia" name="actividades" value="Fotografia">
+            <label for="act_fotografia">Fotografía de paisajes</label><br><br>
+
+            <!-- 4. Tiempo de permanencia (Select) -->
+            <label for="tiempo_visita">4. ¿Cuánto tiempo planea permanecer en el lugar?</label><br>
+            <select id="tiempo_visita" name="tiempo_visita">
+                <option value="menos_2h">Menos de 2 horas (visita fugaz)</option>
+                <option value="medio_dia">Medio día (2 a 4 horas)</option>
+                <option value="todo_dia">Todo el día (sin pernoctar)</option>
+                <option value="1_noche">2 días / 1 noche (acampar o hospedaje cercano)</option>
+            </select><br><br>
+            
+            <!-- 5. Desplazamiento (Checkboxes) -->
+            <label>5. ¿Cómo se desplaza para realizar esta visita?</label><br>
+            <input type="checkbox" id="trans_propio" name="desplazamiento" value="Vehiculo_propio">
+            <label for="trans_propio">Vehículo propio / alquilado</label><br>
+            
+            <input type="checkbox" id="trans_agencia" name="desplazamiento" value="Tour_privado">
+            <label for="trans_agencia">Tour privado con agencia de viajes</label><br>
+            
+            <input type="checkbox" id="trans_publico" name="desplazamiento" value="Transporte_publico">
+            <label for="trans_publico">Transporte público</label><br>
+            
+            <input type="checkbox" id="trans_bici" name="desplazamiento" value="Bicicleta_pie">
+            <label for="trans_bici">Bicicleta / A pie</label><br>
+            
+            <input type="checkbox" id="trans_bus" name="desplazamiento" value="Bus_contratado">
+            <label for="trans_bus">En grupo en autobús contratado</label><br><br>
+            
+            <!-- 6. Atractivo de interés (Datalist) -->
+            <label for="atractivo_interes">6. ¿Qué atractivo o punto específico del lugar es su mayor interés?</label><br>
+            <input list="browsers" id="atractivo_interes" name="atractivo">
+            <datalist id="browsers">
+                <option value="El volcán / Cumbre">
+                <option value="La Laguna de Limpiopungo">
+                <option value="El Refugio José Rivas">
+                <option value="Las áreas de camping / picnic">
+                <option value="Ninguno en particular, vengo a explorar">
+            </datalist><br><br>
+
+            <!-- Sección de sugerencias abierta -->
+            <h3>Sugerencia</h3>
+            <p>Agregue alguna actividad adicional que quiera hacer.</p>
+            <textarea name="message" rows="5" cols="30">Escriba aquí.</textarea>
+            <br><br>
+
+            <input type="submit" value="Enviar Encuesta">
+        </fieldset>
+    </form>
+</body>
+</html>
